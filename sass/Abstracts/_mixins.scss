@@ -1,0 +1,29 @@
+@mixin device($type){
+    @if $type=="mob"{
+        @media (max-width:600px) {
+            @content
+            
+        }
+    }@else if $type == "tab"{
+        @media (min-width:601px) and (max-width:992px) {
+            
+            @content
+        }
+    }@else if $type == "desk" {
+
+        @media (min-width:993px) {
+            
+            @content
+        }
+    }@else if $type == "mob and tab"{
+        @media (max-width:992px) {
+            @content
+        }
+    }@else if $type == "tab and desktop"{
+    
+        @media (min-width:768px) {
+            @content
+        }
+
+    }
+}

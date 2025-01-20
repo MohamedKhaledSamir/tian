@@ -1,0 +1,22 @@
+@use '../Abstracts/variables' as *;
+#review{
+    background-image: url('../../images/review-background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+    padding: 100px 9%;
+    font-weight: bold;
+    margin-top: 100px;
+    .person-name{
+        font-size: $font-size-6;
+        margin-bottom: 30px;
+
+    }
+    .quote{
+        font-size: $font-size-5;
+        color: white;
+        text-align: center;
+        width: 100%;
+    }
+}

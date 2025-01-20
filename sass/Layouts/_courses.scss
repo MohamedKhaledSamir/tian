@@ -1,0 +1,28 @@
+@use '../Components/course-card';
+@use '../Abstracts/variables' as *;
+@use '../Abstracts/mixins' as *;
+#courses{
+margin-top: 100px;
+padding-inline:20px;
+    .title{
+        text-align: center;
+        font-size: $font-size-6;
+        margin-bottom: 40px;
+    }
+
+    .cards{
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        flex-wrap: wrap;
+        gap: 40px;
+        
+        
+
+        @include device("mob"){
+            justify-content: center;
+        }
+    
+  }
+    }
+

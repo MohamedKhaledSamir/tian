@@ -1,0 +1,86 @@
+@use "../Abstracts/place-holders";
+@use "../Abstracts/variables" as *;
+@use "../Components/main-button";
+@use "../Abstracts/mixins" as *;
+main{
+
+    min-height: calc(100vh - 110.5px);
+    @extend %center-content;
+    flex-direction: column;
+    padding-inline: 30px;
+    overflow: hidden;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+    left: 0;
+        background-image: url('../../images/main-background.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: -1;
+        animation: rotate 10s linear infinite;
+        background-size: contain;
+        background-position: center center;
+        @keyframes rotate {
+            
+            100%{
+                rotate: 360deg;
+            }
+
+        }
+    }
+
+    h1{
+        font-size: $font-size-8;
+        margin-bottom: 20px;
+
+        @include device("desk"){
+            max-width: 700px;
+        }
+
+        @include device("mob"){
+
+            font-size:$font-size-7;
+        }
+        
+        @include device("tab"){
+            font-size:$font-size-8;
+
+        }
+        }
+ 
+        p{
+            max-width: 787px;
+            font-size: $font-size-4;
+            color: $gray;
+    
+            @include device("mob"){
+                font-size: $font-size-2;
+    
+            }
+    
+    
+           
+        }
+        .main-button{
+            margin-block: 40px
+        }
+    
+        .watch-action{
+            @extend %center-content;
+            gap: 20px;
+            color: $main-color;
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover{
+                color: $secondary-color;
+            }
+        }
+
+    }    
+
+
+

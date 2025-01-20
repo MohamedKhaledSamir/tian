@@ -1,0 +1,102 @@
+@use '../Abstracts/variables' as * ;
+@use '../Abstracts/place-holders';
+@use '../Abstracts/mixins' as *;
+
+
+.course-card{
+    @extend %center-content;
+    flex-direction: column;
+    box-shadow: 0 0 0.8px #000000;
+    padding-inline: 10px;
+
+    @include device("desk"){
+
+        width: calc((100%/3) - 40px);
+    }
+    
+
+    @include device("tab"){
+
+        width: calc((100%/2) - 40px);
+    }
+    
+  
+    
+
+    @include device("mob"){
+
+        width: 100%;
+    }
+        
+
+    }
+    
+    
+    
+  
+    
+    .image{
+        margin-bottom: 15px;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+        max-width: 100%;
+        border-radius: 10px ;
+        position: relative;
+        img{
+            object-fit: cover;
+        }
+
+        span{
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: white;
+  z-index: 100;
+  background: $main-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+        }
+
+        
+    }
+
+    .course-name{
+        text-align: start;
+        font-size: $font-size-3;
+        padding: 20px;
+    }
+    
+    .course-creator{
+        text-align: start;
+        padding-inline: 20px;
+        width: 100%;
+        color: $gray;
+    }
+    
+    .duration{
+        margin-top: 15px;
+        padding-inline: 20px;
+        display: flex;align-items: center;justify-content: start;width: 100%;
+        gap: 10px;
+        i{
+            color: $light-gray;
+        }
+    }
+
+    .price{
+        width: 100%;
+        text-align: start;
+        padding-inline: 20px;
+        margin-top: 25px;
+        color: $light-gray;
+        margin-bottom: 20px;
+    }
+
+    .course-btn{
+        
+        width: 100%;
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: $font-size-1;
+    }

@@ -1,0 +1,41 @@
+@use "../Abstracts/place-holders" as *;
+@use '../Abstracts/variables' as * ;
+@use '../Abstracts/mixins' as * ;
+.feature-card{
+    display: flex;
+    background-color: $black;
+    padding: 30px;
+    border-radius: 10px;
+    gap: 15px;
+    
+
+   
+    @include device("mob and tab"){
+        flex-grow:1 ;
+
+    }
+
+    i{
+color: $main-color;
+font-size: $font-size-4;
+transform: translateY(15px);
+    }
+
+    .text{
+color: white;
+h2{
+    font-size: $font-size-4;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+p{
+    text-align: left;
+    max-width: 322px;
+    font-weight: 300;
+    font-size: $font-size-2;
+}
+
+    }
+
+}

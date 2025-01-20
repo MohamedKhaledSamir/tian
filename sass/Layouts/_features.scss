@@ -1,0 +1,18 @@
+@use "../Abstracts/place-holders";
+@use '../Components/feature-card';
+@use '../Abstracts/mixins' as * ;
+#features{
+    padding-inline: 20px;
+    @extend %center-content;
+    flex-wrap: wrap;
+    gap: 30px;
+
+    @include device("mob") {
+        gap: 15px;
+        
+    }
+
+
+
+
+}
